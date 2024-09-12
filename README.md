@@ -1,21 +1,33 @@
-# BillionRowChallenge
+# Elixir Billion Row Challenge
 
-**TODO: Add description**
+The goal of this project is to tackle the challenge of processing extremely large datasets with Elixir, leveraging its concurrency and functional programming capabilities. This repository provides a practical example of how to manage and manipulate a billion rows of data efficiently.
 
-## Installation
+## The Challenge
+The Billion Row Challenge is a simple task that involves processing a large dataset. The dataset consists of a billion rows, each containing a city and a measurement of the weather temperature. The goal is to calculate the average temperature for each city.
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `billion_row_challenge` to your list of dependencies in `mix.exs`:
+# Dependencies
+This project requires Elixir to be installed on your machine. You can find the installation instructions [here](https://elixir-lang.org/install.html).
 
-```elixir
-def deps do
-  [
-    {:billion_row_challenge, "~> 0.1.0"}
-  ]
-end
+# Installation
+
+```bash
+git clone https://github.com/Citizen-Thayne/elixir-billion-row-challenge.git
+mix deps.get
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/billion_row_challenge>.
+# Running the project
+Benchmarks built with Benchee are available as a mix task
 
+**Generating the dataset**
+```bash
+mix benchmark generator
+```
+
+**Calculating the average temperature for each city**
+```bash
+mix benchmark average
+```
+
+# TODO
+1. Collect series of benchmark results
+2. Render benchmark results
